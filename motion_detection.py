@@ -111,47 +111,57 @@ if __name__ == "__main__":
 
     selected_method = input("Enter the number corresponding to the desired method: ")
 
+    names = ["kalk.MOV", "ball.MOV", "wave.MOV"]
+
     if selected_method.isdigit() and 1 <= int(selected_method) <= 8:
         if selected_method == "1":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(mog2,cap,"Background Subtractor: MOG2")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(mog2,cap,"Background Subtractor: MOG2")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "2":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(gmg,cap,"Background Subtractor: GMG")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(gmg,cap,"Background Subtractor: GMG")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "3":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(mog,cap,"Background Subtractor: MOG")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(mog,cap,"Background Subtractor: MOG")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "4":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(cnt,cap,"Background Subtractor: CNT")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(cnt,cap,"Background Subtractor: CNT")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "5":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(gsoc,cap,"Background Subtractor: GSOC")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(gsoc,cap,"Background Subtractor: GSOC")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "6":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(lsbp,cap,"Background Subtractor: LSBP")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(lsbp,cap,"Background Subtractor: LSBP")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "7":
-            cap = cv2.VideoCapture("1.webm")
-            backgroundSubtraction(knn,cap,"Background Subtractor: KNN")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                backgroundSubtraction(knn,cap,"Background Subtractor: KNN")
+                cap.release()
+                cv2.destroyAllWindows()
         if selected_method == "8":
-            cap = cv2.VideoCapture("1.webm")
-            foregroundExtraction(cap,"Foreground Extraction")
-            cap.release()
-            cv2.destroyAllWindows()
+            for name in names:
+                cap = cv2.VideoCapture(name)
+                foregroundExtraction(cap,"Foreground Extraction")
+                cap.release()
+                cv2.destroyAllWindows()
     else:
         print("Invalid input.")
 
